@@ -1,0 +1,8 @@
+.chat-log {
+    text-align: left;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+}
+

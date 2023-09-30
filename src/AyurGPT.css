@@ -1,0 +1,101 @@
+.ayurGPT {
+    display: flex;
+}
+
+
+.Main {
+    text-align: center;
+    display: flex;
+    color: black;
+    position: absolute;
+    top: 2.5rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+}
+
+.machine {
+    background-color: #9090901a;
+}
+
+.sidemenu {
+    width: 240px;
+    border: 1px;
+    padding: 40px;
+    background-color: #d5d5d5;
+    color: black;
+}
+
+.side-button-menu {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+
+}
+
+
+
+.brand-name {
+    padding: 16px;
+    background-color: #056526;
+    color: white;
+    border-radius: 10px;
+
+}
+
+
+
+
+
+.side-button-menu:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+
+
+
+.chatbox {
+    flex: 1;
+    background-color: #f1f2f6;
+    position: relative;
+    border-radius: 10px;
+    /* border: 1px solid white; */
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
