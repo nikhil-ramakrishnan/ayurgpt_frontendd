@@ -1,16 +1,23 @@
-import React,{useState} from "react";
+import React,{useState,useContext} from "react";
 import icon from "../assets/icon.svg";
+
+import { LanguageContext } from '../contexts/LanguageContext';
 import "../components/MachineReply.css";
+
+
+
 const MachineReply = (props) => {
   //Change
   const [selectedWord, setSelectedWord] = useState('');
+  const {selectedLanguage} = useContext(LanguageContext);
   // Function to handle the right-click event
   const handleMouseUp = () => {
-    setSelectedWord(window.getSelection().toString().trim());
+    setSelectedWord(window.getSelection().toString().trim());   
   }
 
   async function handleDetails() {
     console.log("Getting more details of "+selectedWord);
+    console.log("Language "+selectedLanguage);
     // var textInput = "Getting more details of "+selectedWord;
     var textInput = selectedWord;
     const response = await fetch("http://localhost:5000/predicted", {
@@ -18,7 +25,7 @@ const MachineReply = (props) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ statement: textInput }),
+      body: JSON.stringify({ statement: textInput,language:selectedLanguage }),
     });
     const data = await response.json();
     console.log(data);
