@@ -1,0 +1,49 @@
+/* LanguageSelector.css */
+
+.language-selector {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+  }
+  
+  .selected-language {
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .selected-language.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .language-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    z-index: 1;
+  }
+  
+  .selected-language.open + .language-dropdown {
+    display: block;
+  }
+  
+  .language-dropdown li {
+    cursor: pointer;
+    padding: 5px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .language-dropdown li.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Additional styles for dropdown animation or customization can be added here */
+  

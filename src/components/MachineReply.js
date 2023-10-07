@@ -11,7 +11,8 @@ const MachineReply = (props) => {
 
   async function handleDetails() {
     console.log("Getting more details of "+selectedWord);
-    var textInput = "Getting more details of "+selectedWord;
+    // var textInput = "Getting more details of "+selectedWord;
+    var textInput = selectedWord;
     const response = await fetch("http://localhost:5000/predicted", {
       method: "POST",
       headers: {
