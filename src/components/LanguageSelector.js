@@ -1,19 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+
+import { LanguageContext } from '../contexts/LanguageContext';
 import './LanguageSelector.css'; // Import the CSS file
 
 const LanguageSelector = () => {
-  const [languages, setLanguages] = useState([
-    { code: 'en', label: 'English' },
-    { code: 'sa', label: 'Sanskrit' },
-    { code: 'ml', label: 'Malayalam' },
-    { code: 'ta', label: 'Tamil' },
-    { code: 'mr', label: 'Marathi' },
-    { code: 'bn', label: 'Bengali' },
-    { code: 'or', label: 'Oriya' },
-  ]);
+//   const [languages, setLanguages] = useState([
+//     { code: 'en', label: 'English' },
+//     { code: 'sa', label: 'Sanskrit' },
+//     { code: 'ml', label: 'Malayalam' },
+//     { code: 'ta', label: 'Tamil' },
+//     { code: 'mr', label: 'Marathi' },
+//     { code: 'bn', label: 'Bengali' },
+//     { code: 'or', label: 'Oriya' },
+//   ]);
 
-  const [selectedLanguage, setSelectedLanguage] = useState('en');
-  const [showDropdown, setShowDropdown] = useState(false);
+  // const [selectedLanguage, setSelectedLanguage] = useState('en');
+  // const [showDropdown, setShowDropdown] = useState(false);
+  const {languages, setLanguages,selectedLanguage, setSelectedLanguage,showDropdown, setShowDropdown} = useContext(LanguageContext);
 
   const handleLanguageChange = (code) => {
     setSelectedLanguage(code);
