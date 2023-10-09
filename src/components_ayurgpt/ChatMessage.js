@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/ChatMessage.css";
+import "../components_ayurgpt/ChatMessage.css";
 import userIcon from "../assets/profile.png";
 const ChatMessage = (props) => {
   return (

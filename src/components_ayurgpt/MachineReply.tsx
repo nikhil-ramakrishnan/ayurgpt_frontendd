@@ -5,6 +5,8 @@ import Popper, { PopperProps } from '@mui/material/Popper';
 import Typography from '@mui/material/Typography';
 import Fade from '@mui/material/Fade';
 import ChatContext from "../store/chatlog-context"
+import { LanguageContext } from '../contexts/LanguageContext';
+
 
 
 
@@ -12,6 +14,7 @@ import ChatContext from "../store/chatlog-context"
 const MachineReply = (props: { message: string }) => {
   const [open, setOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<PopperProps['anchorEl']>(null);
+  const selectedLanguage = useContext(LanguageContext);
 
   const previousAnchorElPosition = React.useRef<DOMRect | undefined>(undefined);
   const chatCtx = useContext(ChatContext)
@@ -71,12 +74,13 @@ const MachineReply = (props: { message: string }) => {
     console.log("Getting more details of " + selectedWord);
     // var textInput = "Getting more details of "+selectedWord;
     var textInput = selectedWord;
+      console.log("Language "+selectedLanguage);
     const response = await fetch("http://localhost:5000/predicted", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ statement: textInput }),
+      body: JSON.stringify({ statement: textInput,language:selectedLanguage })
     });
     const data = await response.json();
     chatCtx.addMessages(data.Slogan, "AyurGPT-Server");
