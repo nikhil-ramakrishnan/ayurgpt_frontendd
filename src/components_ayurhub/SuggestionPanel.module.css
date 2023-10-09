@@ -1,0 +1,20 @@
+.suggestions{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+}
+.container > p{
+    color: black;
+}
+.container{
+    text-align: start;
+    padding: 10px;
+    margin: 10px
+}
+
+.suggestions > div{
+    border-radius: 10px;
+    padding: 12px;
+    background-color: black;
+    margin: 10px;
+}

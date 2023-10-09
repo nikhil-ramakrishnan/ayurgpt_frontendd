@@ -1,0 +1,58 @@
+.hubMain {
+    text-align: center;
+    display: flex;
+    color: white;
+    position: absolute;
+    top: 2rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+}
+.sideMenu {
+    width: 275px;
+    border: 1px;
+    padding: 40px;
+    background-color: #CED4DA;
+}
+
+.imageData > img{
+    max-width: 300px;
+    max-height: 300px;
+    background-color: rgb(0, 159, 71);
+}
+.ImageDescription {
+    padding: 10px;
+    color: black;
+}
+
+
+.containerMain{
+border-radius: 12px;
+display: flex;
+width: 100%;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+height: calc(100vh-2rem);
+}
+
+.containerLeft{
+    margin: 24px;
+    flex: 1;
+    border-radius: 12px;
+    justify-content: center;
+    max-width: 40%;
+    align-items: center;
+    background-color: #CED4DA;
+}
+.containerRight {
+    margin: 24px;
+    flex: 1;
+    padding: 10px;
+    max-width: 40%;
+    justify-content: center;
+    border-radius: 12px;
+    align-items: center;
+    background-color: #02C39A;
+}

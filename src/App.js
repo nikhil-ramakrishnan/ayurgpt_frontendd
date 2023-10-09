@@ -2,13 +2,16 @@ import React, { useState } from "react";
 
 import "./App.css";
 import "./normal.css";
-import Header from "./components_ayurgpt/Header";
+import Header from "./Header";
 import ChatLog from "./components_ayurgpt/ChatLog";
 import ChatInputBox from "./components_ayurgpt/ChatInputBox";
 import ChatlogProvider from "./store/ChatlogProvider";
 import { LanguageContext } from "./contexts/LanguageContext";
+import ChatPage from "./pages/ChatPage";
 // import SasyaSasthra from "./components/SasyaSasthra";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SideMenu from "./SideMenu";
+import AyurHub from "./pages/AyurHub";
 
 function App() {
   // Language States
@@ -38,19 +41,15 @@ function App() {
     >
       <ChatlogProvider>
         <div className="App">
-          <Header />
-          <div className="Main">
-            <aside className="sidemenu">
-              <div className="brand-name">
-                <p>AyurGPT</p>
-              </div>
-              <div className="side-button-menu">New chat</div>
-            </aside>
-            <section className="chatbox">
-              <ChatLog />
-              <ChatInputBox />
-            </section>
-          </div>
+          <BrowserRouter>
+            <div className="fixed-items">
+              <Header />
+            </div>
+            <Routes>
+              <Route path="/" element={<ChatPage />} />
+              <Route path="/ayurhub" element={<AyurHub />} />
+            </Routes>
+          </BrowserRouter>
         </div>
       </ChatlogProvider>
     </LanguageContext.Provider>

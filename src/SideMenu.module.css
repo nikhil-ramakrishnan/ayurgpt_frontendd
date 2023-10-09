@@ -1,0 +1,32 @@
+.sideMenu {
+    width: 240px;
+    border: 1px;
+    padding: 40px;
+    background-color: #CED4DA;
+    height: 100vh;
+}
+
+.sideBtnMenu {
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 24px;
+    color: black;
+}
+
+
+
+.brandName {
+    padding: 16px;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 12px;
+    background-color: #02c39a;
+}
+
+
+.sideBtnMenu:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+

@@ -1,0 +1,53 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:3rem;
+    background-color: #E9ECEF;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    z-index: 10;
+    border-radius: 2px;
+
+}
+
+.navigation{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.header a{
+    display: block;
+    border-radius: 10px;
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+    margin-left: 24px;
+
+    text-decoration: none;
+    font-family: "roboto arial";
+}
+.header a:active{
+    color: black;
+}
+.header a:hover{
+    background-color: #D4A373;
+    transform: scale(1.1);
+}
+
+.headerUserBtn{
+    width: 36px;
+    height: 36px;
+    background: transparent;
+
+}
+.logo {
+    height: 39px;
+    width: 123px;
+}
+
