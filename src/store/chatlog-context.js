@@ -1,6 +1,6 @@
 import React from "react";
 const ChatContext = React.createContext({
   messages: [],
-  addMessages: (ChatMessage) => {},
+  addMessages: (ChatMessage, author) => {},
 });
 export default ChatContext;

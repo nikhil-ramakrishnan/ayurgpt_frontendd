@@ -1,0 +1,47 @@
+.machineMessage {
+    background-color: rgba(225, 22, 22, 0.1);
+    color: black;
+}
+
+.machineAvatar img{
+    /* background-color: aqua; */
+    height: 48px;
+    width: 48px;
+    background-color:ite;
+    border-radius: 5px;
+    margin: 10px;
+    
+
+}
+
+.toggleBtn{
+    display: block;
+    padding: 8px;
+    background: rgb(27, 207, 99);
+    color: white;
+    border-radius: 6px;
+}
+
+
+
+.chatMessageCenter{
+    margin-left: 1rem;
+    padding: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: left;
+}
+
+.chatAvatar{
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+}
+.message{
+    padding-left: 40px;
+    padding-right: 40px;
+}
